@@ -1,0 +1,16 @@
+{
+  "name": "dm-marketing-hub",
+  "version": "1.0.0",
+  "description": "Digital Monk — Marketing Automation & Intelligence Hub",
+  "type": "module",
+  "scripts": {
+    "postinstall": "node _sistema/scripts/setup.mjs",
+    "test-conexao": "node _sistema/scripts/test_conexao.mjs",
+    "start-campaign": "node _sistema/scripts/run_campaign.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.5.0",
+    "csv-parse": "^5.6.0",
+    "dotenv": "^16.4.7"
+  }
+}
