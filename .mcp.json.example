@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "bigin": {
+      "type": "http",
+      "url": "COLE_AQUI_SUA_URL_BIGIN_MCP",
+      "description": "Zoho Bigin CRM — contatos, emails e notas via MCP HTTP"
+    }
+  }
+}
