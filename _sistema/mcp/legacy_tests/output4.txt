@@ -1,0 +1,115 @@
+Connecting to the MCP server...
+[13002] Using transport strategy: http-only
+[13002] Using automatically selected callback port: 27338
+[13002] Discovering OAuth server configuration...
+[13002] [13002] Connecting to remote server: https://digital-test-915932048.zohomcp.com/mcp/message?key=2090cbeecb3ad403f30ef593ec07d96a
+[13002] Using transport strategy: http-only
+[13002] Connected to remote server using StreamableHTTPClientTransport
+[13002] Local STDIO server running
+[13002] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport
+[13002] Press Ctrl+C to exit
+[13002] [Local→Remote] initialize
+[13002] {
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-11-25",
+    "capabilities": {},
+    "clientInfo": {
+      "name": "test-client (via mcp-remote 0.1.37)",
+      "version": "1.0.0"
+    }
+  }
+}
+[13002] [Remote→Local] 0
+Connected successfully!
+[13002] [Local→Remote] notifications/initialized
+[13002] [Local→Remote] tools/list
+[13002] [Remote→Local] 1
+Tools: [
+  'Bigin_getNotes',
+  'Bigin_getConfiguredFromAddresses',
+  'Bigin_getRecordsFromSpecificTeamPipeline',
+  'Bigin_updateSpecificRecord',
+  'Bigin_getOrganizationDetails',
+  'Bigin_deleteRecords',
+  'Bigin_addNotesToSpecificRecord',
+  'Bigin_createBulkRead',
+  'Bigin_getLayoutsMetadata',
+  'Bigin_addNewTags',
+  'Bigin_updateOrDisableANotifDetails',
+  'Bigin_delinkMultipleRelatedListRecords',
+  'Bigin_getRolesData',
+  'Bigin_getTags',
+  'Bigin_downloadBulkReadResult',
+  'Bigin_addNotes',
+  'Bigin_getNotificationDetails',
+  'Bigin_downloadProfilePhoto',
+  'Bigin_createBulkWriteJob',
+  'Bigin_updateSpecificTag',
+  'Bigin_sendEmails',
+  'Bigin_getSpecificUserData',
+  'Bigin_updateRelatedListRecords',
+  'Bigin_removeTagsFromMultipleRecords',
+  'Bigin_getRecords',
+  'Bigin_updateRecords',
+  'Bigin_updateUsersData',
+  'Bigin_addNewUser',
+  'Bigin_delinkSpecificRelatedListRecord',
+  'Bigin_getCustomViewsMetadata',
+  'Bigin_getNotesFromSpecificRecord',
+  'Bigin_removeTagsFromSpecificRecord',
+  'Bigin_getFiles',
+  'Bigin_getAttachments',
+  'Bigin_updateNotificationDetails',
+  'Bigin_addTagsToSpecificRecord',
+  'Bigin_changeMultipleRecordOwners',
+  'Bigin_getSpecificRecord',
+  'Bigin_getBulkReadJobStatus',
+  'Bigin_getRecordsUsingCoqlQuery',
+  'Bigin_getModulesMetadata',
+  'Bigin_enableNotifications',
+  'Bigin_disableNotifications',
+  'Bigin_deleteSpecificRecord',
+  'Bigin_searchRecords',
+  'Bigin_deleteSpecificNote',
+  'Bigin_recordsCount',
+  'Bigin_downloadSpecificAttachment',
+  'Bigin_updateNotes',
+  'Bigin_updateMultipleTags',
+  'Bigin_getProfilesData',
+  'Bigin_getBulkWriteJobStatus',
+  'Bigin_deleteSpecificAttachment',
+  'Bigin_upsertRecords',
+  'Bigin_addRecords',
+  'Bigin_updateSpecificUser',
+  'Bigin_deleteNotes',
+  'Bigin_getDeletedRecords',
+  'Bigin_getRecordCountForSpecificTag',
+  'Bigin_getRelatedListRecords',
+  'Bigin_deleteUser',
+  'Bigin_getFieldsMetadata',
+  'Bigin_addTagsToMultipleRecords',
+  'Bigin_changeRecordOwner',
+  'Bigin_deleteProfilePhoto',
+  'Bigin_getRelatedListsMetadata',
+  'Bigin_deleteTag',
+  'Bigin_getModules',
+  'Bigin_getNewUsers',
+  'Bigin_getSpecificCustomViewMetadata'
+]
+Calling Bigin_getRecords for Contacts...
+[13002] [Local→Remote] tools/call
+[13002] [Remote→Local] 2
+Contacts response: {
+  "content": [
+    {
+      "type": "text",
+      "text": "Mandatory path variable module_api_name is not present in tool body"
+    }
+  ],
+  "isError": false
+}
+[13002] 
+Shutting down...

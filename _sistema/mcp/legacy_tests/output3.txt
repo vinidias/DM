@@ -1,0 +1,115 @@
+Connecting to the MCP server...
+[12826] Using transport strategy: http-only
+[12826] Using automatically selected callback port: 27338
+[12826] Discovering OAuth server configuration...
+[12826] [12826] Connecting to remote server: https://digital-test-915932048.zohomcp.com/mcp/message?key=2090cbeecb3ad403f30ef593ec07d96a
+[12826] Using transport strategy: http-only
+[12826] Connected to remote server using StreamableHTTPClientTransport
+[12826] Local STDIO server running
+[12826] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport
+[12826] Press Ctrl+C to exit
+[12826] [Local→Remote] initialize
+[12826] {
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-11-25",
+    "capabilities": {},
+    "clientInfo": {
+      "name": "test-client (via mcp-remote 0.1.37)",
+      "version": "1.0.0"
+    }
+  }
+}
+[12826] [Remote→Local] 0
+Connected successfully!
+[12826] [Local→Remote] notifications/initialized
+[12826] [Local→Remote] tools/list
+[12826] [Remote→Local] 1
+Tools: [
+  'Bigin_getNotes',
+  'Bigin_getConfiguredFromAddresses',
+  'Bigin_getRecordsFromSpecificTeamPipeline',
+  'Bigin_updateSpecificRecord',
+  'Bigin_getOrganizationDetails',
+  'Bigin_deleteRecords',
+  'Bigin_addNotesToSpecificRecord',
+  'Bigin_createBulkRead',
+  'Bigin_getLayoutsMetadata',
+  'Bigin_addNewTags',
+  'Bigin_updateOrDisableANotifDetails',
+  'Bigin_delinkMultipleRelatedListRecords',
+  'Bigin_getRolesData',
+  'Bigin_getTags',
+  'Bigin_downloadBulkReadResult',
+  'Bigin_addNotes',
+  'Bigin_getNotificationDetails',
+  'Bigin_downloadProfilePhoto',
+  'Bigin_createBulkWriteJob',
+  'Bigin_updateSpecificTag',
+  'Bigin_sendEmails',
+  'Bigin_getSpecificUserData',
+  'Bigin_updateRelatedListRecords',
+  'Bigin_removeTagsFromMultipleRecords',
+  'Bigin_getRecords',
+  'Bigin_updateRecords',
+  'Bigin_updateUsersData',
+  'Bigin_addNewUser',
+  'Bigin_delinkSpecificRelatedListRecord',
+  'Bigin_getCustomViewsMetadata',
+  'Bigin_getNotesFromSpecificRecord',
+  'Bigin_removeTagsFromSpecificRecord',
+  'Bigin_getFiles',
+  'Bigin_getAttachments',
+  'Bigin_updateNotificationDetails',
+  'Bigin_addTagsToSpecificRecord',
+  'Bigin_changeMultipleRecordOwners',
+  'Bigin_getSpecificRecord',
+  'Bigin_getBulkReadJobStatus',
+  'Bigin_getRecordsUsingCoqlQuery',
+  'Bigin_getModulesMetadata',
+  'Bigin_enableNotifications',
+  'Bigin_disableNotifications',
+  'Bigin_deleteSpecificRecord',
+  'Bigin_searchRecords',
+  'Bigin_deleteSpecificNote',
+  'Bigin_recordsCount',
+  'Bigin_downloadSpecificAttachment',
+  'Bigin_updateNotes',
+  'Bigin_updateMultipleTags',
+  'Bigin_getProfilesData',
+  'Bigin_getBulkWriteJobStatus',
+  'Bigin_deleteSpecificAttachment',
+  'Bigin_upsertRecords',
+  'Bigin_addRecords',
+  'Bigin_updateSpecificUser',
+  'Bigin_deleteNotes',
+  'Bigin_getDeletedRecords',
+  'Bigin_getRecordCountForSpecificTag',
+  'Bigin_getRelatedListRecords',
+  'Bigin_deleteUser',
+  'Bigin_getFieldsMetadata',
+  'Bigin_addTagsToMultipleRecords',
+  'Bigin_changeRecordOwner',
+  'Bigin_deleteProfilePhoto',
+  'Bigin_getRelatedListsMetadata',
+  'Bigin_deleteTag',
+  'Bigin_getModules',
+  'Bigin_getNewUsers',
+  'Bigin_getSpecificCustomViewMetadata'
+]
+Calling Bigin_getModules...
+[12826] [Local→Remote] tools/call
+[12826] [Remote→Local] 2
+Modules response: {
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"modules\":[{\"has_more_profiles\":false,\"access_type\":\"org_based\",\"private_profile\":null,\"global_search_supported\":true,\"deletable\":true,\"description\":null,\"creatable\":true,\"email_parser_supported\":true,\"inventory_template_supported\":false,\"modified_time\":\"2026-02-10T13:40:58-03:00\",\"plural_label\":\"Contacts\",\"presence_sub_menu\":true,\"actual_plural_label\":\"Contacts\",\"triggers_supported\":true,\"id\":\"7245140000000002179\",\"isBlueprintSupported\":true,\"visible\":true,\"visibility\":1,\"convertable\":false,\"editable\":true,\"emailTemplate_support\":true,\"actual_singular_label\":\"Contact\",\"profiles\":[{\"name\":\"Administrator\",\"id\":\"7245140000000026011\"},{\"name\":\"Standard\",\"id\":\"7245140000000026014\"}],\"filter_supported\":true,\"show_as_tab\":true,\"web_link\":null,\"sequence_number\":3,\"singular_label\":\"Contact\",\"viewable\":true,\"api_supported\":true,\"api_name\":\"Contacts\",\"quick_create\":true,\"modified_by\":{\"name\":\"Vinicius Dias de Oliveira\",\"id\":\"7245140000000591001\"},\"generated_type\":\"default\",\"feeds_required\":true,\"scoring_supported\":true,\"webform_supported\":true,\"public_fields_configured\":false,\"arguments\":[],\"module_name\":\"Contacts\",\"profile_count\":2,\"business_card_field_limit\":5,\"parent_module\":{}},{\"has_more_profiles\":false,\"access_type\":\"org_based\",\"private_profile\":null,\"global_search_supported\":true,\"deletable\":true,\"description\":null,\"creatable\":true,\"email_parser_supported\":true,\"inventory_template_supported\":false,\"modified_time\":\"2026-02-10T13:40:58-03:00\",\"plural_label\":\"Companies\",\"presence_sub_menu\":true,\"actual_plural_label\":\"Companies\",\"triggers_supported\":true,\"id\":\"7245140000000002177\",\"isBlueprintSupported\":true,\"visible\":true,\"visibility\":1,\"convertable\":false,\"editable\":true,\"emailTemplate_support\":true,\"actual_singular_label\":\"Company\",\"profiles\":[{\"name\":\"Administrator\",\"id\":\"7245140000000026011\"},{\"name\":\"Standard\",\"id\":\"7245140000000026014\"}],\"filter_supported\":true,\"show_as_tab\":true,\"web_link\":null,\"sequence_number\":4,\"singular_label\":\"Company\",\"viewable\":true,\"api_supported\":true,\"api_name\":\"Accounts\",\"quick_create\":true,\"modified_by\":{\"name\":\"Vinicius Dias de Oliveira\",\"id\":\"7245140000000591001\"},\"generated_type\":\"default\",\"feeds_required\":true,\"scoring_supported\":true,\"webform_supported\":false,\"public_fields_configured\":false,\"arguments\":[],\"module_name\":\"Accounts\",\"profile_count\":2,\"business_card_field_limit\":5,\"parent_module\":{}},{\"has_more_profiles\":false,\"access_type\":\"org_based\",\"private_profile\":null,\"global_search_supported\":true,\"deletable\":true,\"description\":null,\"creatable\":true,\"email_parser_supported\":false,\"inventory_template_supported\":false,\"modified_time\":\"2026-02-23T12:00:17-03:00\",\"plural_label\":\"Pipelines\",\"presence_sub_menu\":true,\"actual_plural_label\":\"Pipelines\",\"triggers_supported\":true,\"id\":\"7245140000000002181\",\"isBlueprintSupported\":true,\"visible\":true,\"visibility\":1,\"convertable\":false,\"editable\":true,\"emailTemplate_support\":true,\"actual_singular_label\":\"Pipeline\",\"profiles\":[{\"name\":\"Administrator\",\"id\":\"7245140000000026011\"},{\"name\":\"Standard\",\"id\":\"7245140000000026014\"}],\"filter_supported\":true,\"show_as_tab\":true,\"web_link\":null,\"sequence_number\":5,\"singular_label\":\"Pipeline\",\"viewable\":true,\"api_supported\":true,\"api_name\":\"Pipelines\",\"quick_create\":true,\"modified_by\":{\"name\":\"Vinicius Dias de Oliveira\",\"id\":\"7245140000000591001\"},\"generated_type\":\"default\",\"feeds_required\":true,\"scoring_supported\":true,\"webform_supported\":true,\"public_fields_configured\":false,\"arguments\":[],\"module_name\":\"Pipelines\",\"profile_count\":2,\"business_card_field_limit\":5,\"parent_module\":{}},{\"has_more_profiles\":false,\"access_type\":\"org_based\",\"private_profile\":null,\"global_search_supported\":true,\"deletable\":true,\"description\":null,\"creatable\":true,\"email_parser_supported\":false,\"inventory_template_supported\":false,\"modified_time\":\"2026-02-10T13:40:58-03:00\",\"plural_label\":\"Tasks\",\"presence_sub_menu\":true,\"actual_plural_label\":\"Tasks\",\"triggers_supported\":true,\"id\":\"7245140000000002193\",\"isBlueprintSupported\":true,\"visible\":true,\"visibility\":1,\"convertable\":false,\"editable\":true,\"emailTemplate_support\":true,\"actual_singular_label\":\"Task\",\"profiles\":[{\"name\":\"Administrator\",\"id\":\"7245140000000026011\"},{\"name\":\"Standard\",\"id\":\"7245140000000026014\"}],\"filter_supported\":true,\"show_as_tab\":true,\"web_link\":null,\"sequence_number\":6,\"singular_label\":\"Task\",\"viewable\":true,\"api_supported\":true,\"api_name\":\"Tasks\",\"quick_create\":true,\"modified_by\":{\"name\":\"Vinicius Dias de Oliveira\",\"id\":\"7245140000000591001\"},\"generated_type\":\"default\",\"feeds_required\":true,\"scoring_supported\":false,\"webform_supported\":false,\"public_fields_configured\":false,\"arguments\":[],\"module_name\":\"Tasks\",\"profile_count\":2,\"business_card_field_limit\":5,\"parent_module\":{}},{\"has_more_profiles\":false,\"access_type\":\"org_based\",\"private_profile\":null,\"global_search_supported\":true,\"deletable\":true,\"description\":null,\"creatable\":true,\"email_parser_supported\":false,\"inventory_template_supported\":false,\"modified_time\":\"2026-02-10T13:40:58-03:00\",\"plural_label\":\"Events\",\"presence_sub_menu\":true,\"actual_plural_label\":\"Events\",\"triggers_supported\":true,\"id\":\"7245140000000002195\",\"isBlueprintSupported\":true,\"visible\":true,\"visibility\":1,\"convertable\":false,\"editable\":true,\"emailTemplate_support\":true,\"actual_singular_label\":\"Event\",\"profiles\":[{\"name\":\"Administrator\",\"id\":\"7245140000000026011\"},{\"name\":\"Standard\",\"id\":\"7245140000000026014\"}],\"filter_supported\":true,\"show_as_tab\":true,\"web_link\":null,\"sequence_number\":6,\"singular_label\":\"Event\",\"viewable\":true,\"api_supported\":true,\"api_name\":\"Events\",\"quick_create\":true,\"modified_by\":{\"name\":\"Vinicius Dias de Oliveira\",\"id\":\"7245140000000591001\"},\"generated_type\":\"default\",\"feeds_required\":true,\"scoring_supported\":false,\"webform_supported\":false,\"public_fields_configured\":false,\"arguments\":[],\"module_name\":\"Events\",\"profile_count\":2,\"business_card_field_limit\":5,\"parent_module\":{}},{\"has_more_profiles\":false,\"access_type\":\"org_based\",\"private_profile\":null,\"global_search_supported\":true,\"deletable\":true,\"description\":null,\"creatable\":true,\"email_parser_supported\":false,\"inventory_template_supported\":false,\"modified_time\":\"2026-02-10T13:40:58-03:00\",\"plural_label\":\"Calls\",\"presence_sub_menu\":true,\"actual_plural_label\":\"Calls\",\"triggers_supported\":true,\"id\":\"7245140000000033015\",\"isBlueprintSupported\":false,\"visible\":true,\"visibility\":1,\"convertable\":false,\"editable\":true,\"emailTemplate_support\":true,\"actual_singular_label\":\"Call\",\"profiles\":[{\"name\":\"Administrator\",\"id\":\"7245140000000026011\"},{\"name\":\"Standard\",\"id\":\"7245140000000026014\"}],\"filter_supported\":true,\"show_as_tab\":true,\"web_link\":null,\"sequence_number\":6,\"singular_label\":\"Call\",\"viewable\":true,\"api_supported\":true,\"api_name\":\"Calls\",\"quick_create\":true,\"modified_by\":{\"name\":\"Vinicius Dias de Oliveira\",\"id\":\"7245140000000591001\"},\"generated_type\":\"default\",\"feeds_required\":true,\"scoring_supported\":false,\"webform_supported\":false,\"public_fields_configured\":false,\"arguments\":[],\"module_name\":\"Calls\",\"profile_count\":2,\"business_card_field_limit\":5,\"parent_module\":{}},{\"has_more_profiles\":false,\"access_type\":\"org_based\",\"private_profile\":null,\"global_search_supported\":true,\"deletable\":true,\"description\":null,\"creatable\":true,\"email_parser_supported\":false,\"inventory_template_supported\":false,\"modified_time\":\"2026-02-10T13:40:58-03:00\",\"plural_label\":\"Products\",\"presence_sub_menu\":true,\"actual_plural_label\":\"Products\",\"triggers_supported\":true,\"id\":\"7245140000000002213\",\"isBlueprintSupported\":true,\"visible\":true,\"visibility\":1,\"convertable\":false,\"editable\":true,\"emailTemplate_support\":true,\"actual_singular_label\":\"Product\",\"profiles\":[{\"name\":\"Administrator\",\"id\":\"7245140000000026011\"},{\"name\":\"Standard\",\"id\":\"7245140000000026014\"}],\"filter_supported\":true,\"show_as_tab\":true,\"web_link\":null,\"sequence_number\":9,\"singular_label\":\"Product\",\"viewable\":true,\"api_supported\":true,\"api_name\":\"Products\",\"quick_create\":true,\"modified_by\":{\"name\":\"Vinicius Dias de Oliveira\",\"id\":\"7245140000000591001\"},\"generated_type\":\"default\",\"feeds_required\":true,\"scoring_supported\":false,\"webform_supported\":false,\"public_fields_configured\":false,\"arguments\":[],\"module_name\":\"Products\",\"profile_count\":2,\"business_card_field_limit\":5,\"parent_module\":{}},{\"has_more_profiles\":false,\"access_type\":\"org_based\",\"private_profile\":null,\"global_search_supported\":true,\"deletable\":true,\"description\":null,\"creatable\":true,\"email_parser_supported\":false,\"inventory_template_supported\":false,\"modified_time\":\"2026-02-10T13:40:58-03:00\",\"plural_label\":\"Associated Products\",\"presence_sub_menu\":false,\"actual_plural_label\":\"Associated Products\",\"triggers_supported\":false,\"id\":\"7245140000000594014\",\"isBlueprintSupported\":false,\"visible\":true,\"visibility\":2,\"convertable\":false,\"editable\":true,\"emailTemplate_support\":false,\"actual_singular_label\":\"Associated Products\",\"profiles\":[{\"name\":\"Administrator\",\"id\":\"7245140000000026011\"},{\"name\":\"Standard\",\"id\":\"7245140000000026014\"}],\"filter_supported\":false,\"show_as_tab\":false,\"web_link\":null,\"sequence_number\":25,\"singular_label\":\"Associated Products\",\"viewable\":true,\"api_supported\":true,\"api_name\":\"Associated_Products\",\"quick_create\":false,\"modified_by\":{\"name\":\"Vinicius Dias de Oliveira\",\"id\":\"7245140000000591001\"},\"generated_type\":\"subform\",\"feeds_required\":false,\"scoring_supported\":false,\"webform_supported\":false,\"public_fields_configured\":false,\"arguments\":[],\"module_name\":\"LinkingModule1\",\"profile_count\":2,\"business_card_field_limit\":5,\"parent_module\":{\"api_name\":\"Pipelines\",\"id\":\"7245140000000002181\"}},{\"has_more_profiles\":false,\"access_type\":\"org_based\",\"private_profile\":null,\"global_search_supported\":true,\"deletable\":true,\"description\":null,\"creatable\":true,\"email_parser_supported\":false,\"inventory_template_supported\":false,\"modified_time\":\"2026-02-10T13:40:58-03:00\",\"plural_label\":\"Notes\",\"presence_sub_menu\":false,\"actual_plural_label\":\"Notes\",\"triggers_supported\":false,\"id\":\"7245140000000002197\",\"isBlueprintSupported\":false,\"visible\":false,\"visibility\":1,\"convertable\":false,\"editable\":true,\"emailTemplate_support\":false,\"actual_singular_label\":\"Note\",\"profiles\":[{\"name\":\"Administrator\",\"id\":\"7245140000000026011\"},{\"name\":\"Standard\",\"id\":\"7245140000000026014\"}],\"filter_supported\":false,\"show_as_tab\":false,\"web_link\":null,\"sequence_number\":29,\"singular_label\":\"Note\",\"viewable\":true,\"api_supported\":true,\"api_name\":\"Notes\",\"quick_create\":false,\"modified_by\":{\"name\":\"Vinicius Dias de Oliveira\",\"id\":\"7245140000000591001\"},\"generated_type\":\"default\",\"feeds_required\":false,\"scoring_supported\":false,\"webform_supported\":false,\"public_fields_configured\":false,\"arguments\":[],\"module_name\":\"Notes\",\"profile_count\":2,\"business_card_field_limit\":5,\"parent_module\":{}},{\"has_more_profiles\":false,\"access_type\":\"org_based\",\"private_profile\":null,\"global_search_supported\":false,\"deletable\":true,\"description\":null,\"creatable\":true,\"email_parser_supported\":false,\"inventory_template_supported\":false,\"modified_time\":\"2026-02-10T13:40:58-03:00\",\"plural_label\":\"Attachments\",\"presence_sub_menu\":false,\"actual_plural_label\":\"Attachments\",\"triggers_supported\":false,\"id\":\"7245140000000002227\",\"isBlueprintSupported\":false,\"visible\":false,\"visibility\":1,\"convertable\":false,\"editable\":false,\"emailTemplate_support\":false,\"actual_singular_label\":\"Attachment\",\"profiles\":[{\"name\":\"Administrator\",\"id\":\"7245140000000026011\"},{\"name\":\"Standard\",\"id\":\"7245140000000026014\"}],\"filter_supported\":false,\"show_as_tab\":false,\"web_link\":null,\"sequence_number\":33,\"singular_label\":\"Attachment\",\"viewable\":true,\"api_supported\":true,\"api_name\":\"Attachments\",\"quick_create\":false,\"modified_by\":{\"name\":\"Vinicius Dias de Oliveira\",\"id\":\"7245140000000591001\"},\"generated_type\":\"default\",\"feeds_required\":false,\"scoring_supported\":false,\"webform_supported\":false,\"public_fields_configured\":false,\"arguments\":[],\"module_name\":\"Attachments\",\"profile_count\":2,\"business_card_field_limit\":5,\"parent_module\":{}}]}"
+    }
+  ],
+  "isError": false
+}
+[12826] 
+Shutting down...

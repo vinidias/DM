@@ -1,0 +1,138 @@
+Connecting to the MCP server...
+[13216] Using transport strategy: http-only
+[13216] Using automatically selected callback port: 27338
+[13216] Discovering OAuth server configuration...
+[13216] [13216] Connecting to remote server: https://digital-test-915932048.zohomcp.com/mcp/message?key=2090cbeecb3ad403f30ef593ec07d96a
+[13216] Using transport strategy: http-only
+[13216] Connected to remote server using StreamableHTTPClientTransport
+[13216] Local STDIO server running
+[13216] Proxy established successfully between local STDIO and remote StreamableHTTPClientTransport
+[13216] Press Ctrl+C to exit
+[13216] [Local→Remote] initialize
+[13216] {
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-11-25",
+    "capabilities": {},
+    "clientInfo": {
+      "name": "test-client (via mcp-remote 0.1.37)",
+      "version": "1.0.0"
+    }
+  }
+}
+[13216] [Remote→Local] 0
+Connected successfully!
+[13216] [Local→Remote] notifications/initialized
+[13216] [Local→Remote] tools/list
+[13216] [Remote→Local] 1
+Bigin_getRecords schema: {
+  "name": "Bigin_getRecords",
+  "description": "null### LLM and Agent Execution Workflow\nThis is the primary tool for listing multiple records when the user's query is simple or references a pre-defined filter.\n 1. **Resolve Custom Terminology:** If the user refers to a record type using a non-standard term (e.g., \"show me all my *tickets*,\" \"list my *projects*\"), you **must** first resolve this term.\n      *   **Action:** Call the **Layouts Metadata API**.\n      *   **Logic:** Search the response. For each layout, check if the `singular_label` (e.g., 'Ticket') or `plural_label` (e.g., 'Tickets') matches the user's term.\n      *   **Result:** If a match is found, you now know the user is referring to the `Pipelines` module. The context of the specific Team Pipeline (its ID, stages) is also now known and should be used for further filtering if possible (e.g., via the COQL API). If no match is found, ask the user to clarify.\n2. **Identify User Intent:**  Use this operation when a user asks for multiple records from a specific module.\n3. **Handle Vague Queries:** If the user's request is complex, prefer using the **COQL API** for more powerful filtering.\n4. **Resolve Custom View IDs:** If the user mentions a specific named filter (e.g., \"Show me the 'Hot Leads' view\"), that name is not the ID. You must first call the **Custom Views Metadata API** to find the corresponding `id` for that view name, then use it for the `cvid` parameter.\n5. **Clarify Fields for Display:** To provide a better response, ask the user what information they want to see for each record. Use their answer to populate the `fields` parameter. If they don't specify, you can default to a few common fields.\n6.  **Handle Pagination:** After a successful call, check the `info.more_records` flag. If `true`, inform the user that more records are available and ask if they wish to see the next page. Use the `page` or `page_token` parameters for subsequent calls.\n",
+  "inputSchema": {
+    "type": "object",
+    "properties": {
+      "path_variables": {
+        "properties": {
+          "module_api_name": {
+            "description": "The api name of the module.",
+            "enum": [
+              "Contacts",
+              "Pipelines",
+              "Accounts",
+              "Products",
+              "Tasks",
+              "Events",
+              "Calls"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "module_api_name"
+        ],
+        "type": "object"
+      },
+      "query_params": {
+        "properties": {
+          "approved": {
+            "description": "Filter records based on their approval status.\n- `true`: (Default) Retrieve only approved records.\n- `false`: Retrieve records that are not approved.\n- `both`: Retrieve all records, regardless of approval status.\n",
+            "enum": [
+              "true",
+              "false",
+              "both"
+            ],
+            "type": "string"
+          },
+          "cvid": {
+            "description": "Filter records by a specific custom view ID. Obtainable from the Custom Views Metadata API.",
+            "type": "string"
+          },
+          "fields": {
+            "description": "(e.g. fields=Deal_Name,Stage)",
+            "type": "string"
+          },
+          "page": {
+            "default": 1,
+            "description": "The page number of the results to retrieve. <br/>\n**Note:** Use this with the **per_page** parameter to paginate. To retrieve 400 records, you would make two separate API calls: one with **page=1** and another with **page=2**, both using **per_page=200**.\n",
+            "minimum": 1,
+            "type": "integer"
+          },
+          "page_token": {
+            "description": "Used for deep pagination to retrieve records beyond the 2000th record. \n\nTo use this, get the value from the **next_page_token** key in the **info** object of a previous API response and pass it here.\n",
+            "type": "string"
+          },
+          "per_page": {
+            "default": 200,
+            "description": "The number of records to return per page (up to a maximum of 200 records per page). <br/>\n**Note:** Use this with the **page** parameter to paginate. To retrieve 400 records, you would make two separate API calls: one with **page=1** and another with **page=2**, both using **per_page=200**.\n",
+            "maximum": 200,
+            "minimum": 1,
+            "type": "integer"
+          },
+          "sort_by": {
+            "description": "Specifies the field API name to sort the records by.\n\n### LLM and Agent Execution Workflow\n**IMPORTANT:** Not all fields are sortable. You **must** verify that a field is sortable before using it in this parameter.\n\n1.  **Identify User's Sort Request:** When the user asks to \"sort by,\" \"order by,\" or uses terms like \"newest\" or \"alphabetically,\" identify the field they are referring to (e.g., \"last name,\" \"created date\").\n\n2.  **Verify Sortability via Metadata:**\n    *   **Action:** Before executing the call, you **must** use the **Fields Metadata API** for the relevant module.\n    *   **Logic:** In the metadata response, find the object corresponding to the user's desired field. Check the value of its boolean `sortable` property (or a similar flag like `is_sortable`).\n\n3.  **Handle the Result:**\n    *   **If `sortable` is `true`:** The field is valid. Use its `api_name` as the value for this `sort_by` parameter.\n    *   **If `sortable` is `false`:** The field cannot be used for sorting. You **must not** proceed with the invalid parameter. Instead, inform the user and offer valid alternatives.\n        *   **Example Interaction:** \"I'm sorry, I can't sort records by the 'Description' field. However, I can sort by [list a few valid sortable fields like 'Last_Name', 'Created_Time', etc.]. How would you like to proceed?\"\n\n4.  **Determine Sort Order:** After confirming a valid `sort_by` field, clarify the sort order with the user (ascending or descending) and use it for the `sort_order` parameter.\n",
+            "type": "string"
+          },
+          "sort_order": {
+            "description": "The order to sort the records.",
+            "enum": [
+              "asc",
+              "desc"
+            ],
+            "type": "string"
+          }
+        },
+        "required": [
+          "fields"
+        ],
+        "type": "object"
+      }
+    },
+    "required": [
+      "query_params",
+      "path_variables"
+    ]
+  },
+  "annotations": {
+    "title": "Bigin_getRecords",
+    "readOnlyHint": true,
+    "destructiveHint": false,
+    "idempotentHint": false,
+    "openWorldHint": false
+  }
+}
+Calling Bigin_getRecords for Contacts...
+[13216] [Local→Remote] tools/call
+[13216] [Remote→Local] 2
+Contacts response: {
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"data\":[{\"First_Name\":\"Ted\",\"Email\":\"support@bigin.com\",\"Last_Name\":\"Watson\",\"Phone\":null,\"id\":\"7245140000000597045\"}],\"info\":{\"per_page\":200,\"next_page_token\":null,\"count\":1,\"sort_by\":\"id\",\"page\":1,\"previous_page_token\":null,\"page_token_expiry\":null,\"sort_order\":\"desc\",\"more_records\":false}}"
+    }
+  ],
+  "isError": false
+}
+[13216] 
+Shutting down...

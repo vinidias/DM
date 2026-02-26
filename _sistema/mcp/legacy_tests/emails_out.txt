@@ -1,0 +1,7 @@
+Connecting to the MCP server...
+Connected successfully!
+
+Retrieving Emails for Contact ID: 7245140000000614005...
+Raw Response:
+Mandatory query param fields is not present in tool body
+Could not parse as JSON.
