@@ -1,74 +1,76 @@
-# Digital Monk — Marketing Hub
+# 🚀 Digital Monk Marketing Hub
 
-Hub de automação de campanhas B2B para a Digital Monk.
-Integra **Bigin CRM**, **NotebookLM** (IA) e **Google Drive** para outreach inteligente.
-
----
-
-## Estrutura do Workspace
-
-```
-📁 Campanhas/
-│   └── _Modelos/
-│       ├── Emails/          ← Templates HTML de email (edite aqui)
-│       ├── Artigos/         ← Rascunhos para LinkedIn e Blog
-│       └── COMO_USAR.md
-
-📁 Assets/
-│   ├── Imagens/             ← Logos e imagens das campanhas
-│   └── Assinaturas/         ← Assinatura HTML de email
-```
-
-> Tudo técnico fica em `_sistema/` — não precisa ser tocado pelo time de Marketing.
+Hub de inteligência e automação de marketing B2B conectado ao Bigin CRM (Zoho) e ao NotebookLM via MCP.
 
 ---
 
-## Setup (só na primeira vez)
+## ⚡ Como usar (sem instalação)
 
-### 1. Instalar dependências
+**1. Clone o repositório**
 ```bash
-npm install
+git clone https://github.com/vinidias/DM.git
 ```
 
-### 2. Configurar o Bigin CRM
+**2. Abra a pasta no Antigravity**
 
-Copie o arquivo `.env.example` e renomeie para `.env`:
+**3. Reinicie o Antigravity** → o servidor Bigin MCP é ativado automaticamente
 
-```bash
-cp .env.example .env
-```
-
-Abra o `.env` e cole a URL gerada no painel do Bigin:
-```
-# Bigin > Configurações > Integrações > MCP → copie a URL
-BIGIN_MCP_URL=https://SEU-DOMINIO.zohomcp.com/mcp/message?key=SUA_CHAVE
-```
-
-Valide a conexão:
-```bash
-npm run test-conexao
-```
-
-Se aparecer ✅, está tudo pronto.
-
-### 3. Configurar o NotebookLM (IA de Conteúdo)
-
-```bash
-npx @google/notebooklm-mcp-cli login
-```
-
-O Chrome vai abrir para login com o Google. Só confirmar e fechar.
+**4. Cole o prompt abaixo no chat e comece** 👇
 
 ---
 
-## Uso no dia a dia
+## 💬 Prompt de Início
 
-**Rodar uma campanha:**
-```bash
-npm run start-campaign
+Cole este prompt no chat do Antigravity para ativar o agente:
+
+```
+Leia o AGENT.md deste projeto e me confirme quais ferramentas MCP estão disponíveis. Estou pronto para planejar uma nova campanha.
 ```
 
-> Antes de rodar: certifique-se que os contatos estão em `_sistema/contatos/curado.csv`.
+---
 
-**Ou simplesmente peça ao Antigravity:**
-> *"Extrai os contatos de Telecom do Bigin e inicia a campanha de descoberta."*
+## 📁 Estrutura do Projeto
+
+```
+DM/
+├── Campanhas/
+│   ├── _Modelos/
+│   │   ├── Emails/          ← Templates HTML de email (cada etapa)
+│   │   └── Artigos/         ← Modelos de artigo LinkedIn
+│   └── Glassbox 2026/       ← Campanha ativa com emails e post LinkedIn
+├── _sistema/
+│   ├── config/setores.json  ← Setores alvo com queries NotebookLM
+│   ├── mcp/                 ← Scripts de referência MCP
+│   └── scripts/             ← Automação Node.js (opcional)
+├── .mcp.json                ← Configuração MCP automática (Bigin)
+├── AGENT.md                 ← Instruções completas do agente
+└── PROMPT_INICIO.md         ← Prompt pronto para colar no chat
+```
+
+---
+
+## 🔧 O que o agente consegue fazer
+
+| Ação | Como pedir no chat |
+|---|---|
+| Planejar campanha para um setor | *"Planeje uma campanha para o setor financeiro"* |
+| Buscar contatos no Bigin | *"Liste os contatos com a tag telecom"* |
+| Criar email personalizado | *"Crie o email 1 para [Nome] da [Empresa]"* |
+| Disparar email via CRM | *"Envie o email para [Nome]"* |
+| Buscar insights no NotebookLM | *"Quais são as principais dores do setor de seguros?"* |
+| Registrar etapa no contato | *"Registre que enviamos o Email 1 para [Nome] hoje"* |
+
+---
+
+## 🧠 Fontes de Inteligência (NotebookLM)
+
+| Notebook | Para que serve |
+|---|---|
+| Glassbox (111 fontes) | Casos de uso, métricas reais, dores por setor |
+| Glassbox Checkout | E-commerce, acessibilidade, checkout |
+| Customer Experience & SAC | Insights de CX, NPS, atendimento |
+
+---
+
+> **Node.js é opcional.** A conexão com o Bigin MCP é HTTP nativa — basta clonar e abrir no Antigravity.
+> Para usar os scripts de automação em lote: `npm install && npm run start-campaign`
