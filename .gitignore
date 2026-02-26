@@ -1,6 +1,5 @@
 # Segredos — NUNCA commitar
 .env
-.mcp.json
 
 # Dependências Node
 node_modules/
