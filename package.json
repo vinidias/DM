@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "postinstall": "node _sistema/scripts/setup.mjs",
+    "setup": "node _sistema/scripts/setup.mjs",
     "test-conexao": "node _sistema/scripts/test_conexao.mjs",
     "start-campaign": "node _sistema/scripts/run_campaign.mjs"
   },
