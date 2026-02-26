@@ -6,14 +6,19 @@ node_modules/
 package-lock.json
 
 # Pastas antigas (estrutura legada, substituída pela nova)
-scripts/
-config/
-files/
-Modelos de Email/
-Modelos de Artigos/
+/scripts/
+/config/
+/files/
+/Modelos de Email/
+/Modelos de Artigos/
 
 # Contatos extraídos do CRM (dados privados, não vão ao repositório)
 _sistema/contatos/
+
+# Arquivos de saída de testes
+mcptest/output*.txt
+mcptest/emails_out.txt
+mcptest/tools_out.txt
 
 # Logs e temporários
 *.log

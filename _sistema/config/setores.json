@@ -1,0 +1,35 @@
+{
+    "setores": {
+        "telecom": {
+            "dores": [
+                "Abandono de fluxo na comparação e upgrade de planos",
+                "Erros 404 e APIs lentas cortando jornadas de compra",
+                "Códigos promocionais expirados no checkout",
+                "Rage clicks e dead clicks gerando churn silencioso"
+            ],
+            "metricas_impacto": [
+                "Operadora com 21M assinantes: risco de US$ 2M por erro de link",
+                "Falha em código promocional: US$ 500K+ em vendas anuais perdidas"
+            ],
+            "notebook_query_base": "Quais são os pontos de atrito e casos comprovados do Glassbox no setor de telecomunicações?"
+        },
+        "financeiro": {
+            "dores": [
+                "Abandono em onboarding digital e abertura de conta",
+                "Falhas em autenticação e validação de documentos",
+                "Fricção em fluxos de contratação de produtos financeiros"
+            ],
+            "metricas_impacto": [],
+            "notebook_query_base": "Quais são os pontos de atrito e casos comprovados do Glassbox no setor financeiro e bancário?"
+        },
+        "varejo": {
+            "dores": [
+                "Abandono de carrinho por erros de UI no checkout",
+                "Problemas de acessibilidade em mobile",
+                "Falhas em cupons e promoções no e-commerce"
+            ],
+            "metricas_impacto": [],
+            "notebook_query_base": "Quais são os pontos de atrito e casos comprovados do Glassbox no setor de varejo e e-commerce?"
+        }
+    }
+}
