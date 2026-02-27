@@ -2,7 +2,10 @@
 description: Gerar um plano transversal e calendário de conteúdo para Social Media e Email Marketing (B2B).
 ---
 
+// turbo-all
+
 # Fluxo de Trabalho: Plano e Calendário de Marketing Digital (Email + Social)
+
 
 Este fluxo orienta o agente na criação de uma estratégia unificada, garantindo que o conteúdo de redes sociais (como artigos de LinkedIn) esteja totalmente alinhado com o disparo de cadências de email marketing para a mesma campanha.
 
