@@ -6,6 +6,24 @@ description: Gerar um plano transversal e calendário de conteúdo para Social M
 
 Este fluxo orienta o agente na criação de uma estratégia unificada, garantindo que o conteúdo de redes sociais (como artigos de LinkedIn) esteja totalmente alinhado com o disparo de cadências de email marketing para a mesma campanha.
 
+---
+
+## ⚠️ Diretriz Editorial Obrigatória: Necessidade, Não Funcionalidade
+
+**Proibido:** Listar features e funções do produto (padrão "Features & Functions").
+> ❌ "O Glassbox tem Session Replay, Heatmaps e Struggle Score"
+
+**Obrigatório:** Partir da dor real do público e mostrar por que a ferramenta se torna inevitável.
+> ✅ "Você sabe que 12% dos seus usuários desistiram no checkout. Mas você sabe por que? E sabe que eles não vão te ligar para avisar?"
+
+A estrutura correta é sempre:
+1. **Dor** → Começar com o problema concreto que o profissional enfrenta (e provavelmente ignora).
+2. **Custo do Silêncio** → O que custa *não saber*? Quantificar em receita, tempo ou reputação.
+3. **Alternativa Inevitável** → Mostrar como a ferramenta resolve o problema de forma que nada mais consegue.
+4. **Prova** → Caso real com número real.
+
+---
+
 ### Passos da Execução:
 
 1. **Extração de Insights Baseados em Dados Reais (NotebookLM)**
@@ -24,7 +42,8 @@ Este fluxo orienta o agente na criação de uma estratégia unificada, garantind
    - Salve os ativos na pasta da Campanha atual (ex: `Campanhas/Nome_da_Campanha/Artigos/`).
 
 4. **Elaboração dos Textos (Copy) e Email**
-   - Escreva o rascunho dos posts no formato `.md`.
+   - Escreva o rascunho dos posts no formato `.md` seguindo **obrigatoriamente** a estrutura: Dor → Custo do Silêncio → Alternativa Inevitável → Prova com Número Real.
+   - NÃO iniciar com apresentação do produto. Iniciar SEMPRE com uma situação concreta que o leitor já viveu ou teme.
    - Adapte um modelo de HTML em `Campanhas/_Modelos/Emails/` ou gere um novo template otimizado focado na mensagem da semana, garantindo taxa de abertura.
 
 5. **Aprovação e Gerenciamento no Pipeline de Conteúdo (Bigin)**
