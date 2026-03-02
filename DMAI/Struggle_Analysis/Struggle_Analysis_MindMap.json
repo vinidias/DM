@@ -1,0 +1,165 @@
+{
+  "name": "Digital Monk & Glassbox: Inteligência de Experiência Digital",
+  "children": [
+    {
+      "name": "Identidade Visual Digital Monk",
+      "children": [
+        {
+          "name": "Conceito Marca",
+          "children": [
+            {
+              "name": "Acabar com pontos cegos"
+            },
+            {
+              "name": "Símbolo PixelOlho"
+            }
+          ]
+        },
+        {
+          "name": "Paleta de Cores",
+          "children": [
+            {
+              "name": "Verde #2ECB53"
+            },
+            {
+              "name": "Amarelo #F8CA08"
+            },
+            {
+              "name": "Azul #2B80FB"
+            },
+            {
+              "name": "Vermelho #FF2E24"
+            }
+          ]
+        },
+        {
+          "name": "Tipografia",
+          "children": [
+            {
+              "name": "Primária: Inria Sans"
+            },
+            {
+              "name": "Secundária: Inter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Digital Experience Intelligence (DXI)",
+      "children": [
+        {
+          "name": "Captura Tagless",
+          "children": [
+            {
+              "name": "Sem manutenção de tags"
+            },
+            {
+              "name": "Análise retroativa"
+            },
+            {
+              "name": "Captura 100% de eventos"
+            }
+          ]
+        },
+        {
+          "name": "Session Replay Avançado",
+          "children": [
+            {
+              "name": "Reprodução visual fiel"
+            },
+            {
+              "name": "Sincronização com logs de rede"
+            },
+            {
+              "name": "Visualização de payloads JSON"
+            }
+          ]
+        },
+        {
+          "name": "Struggle Analysis",
+          "children": [
+            {
+              "name": "Struggle Score (0 a 1)"
+            },
+            {
+              "name": "Identificação de Rage Clicks"
+            },
+            {
+              "name": "Detecção de Dead Taps"
+            },
+            {
+              "name": "Revenue Opportunity Loss"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Análise de Jornada e Interação",
+      "children": [
+        {
+          "name": "Interaction Maps",
+          "children": [
+            {
+              "name": "Heatmaps dinâmicos"
+            },
+            {
+              "name": "Live Interaction Extension"
+            },
+            {
+              "name": "Comparação de Testes A/B"
+            }
+          ]
+        },
+        {
+          "name": "Page Journey",
+          "children": [
+            {
+              "name": "Path Analysis"
+            },
+            {
+              "name": "Identificação de Loops de Navegação"
+            },
+            {
+              "name": "Análise de abandono (Drop-off)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Segurança e Performance",
+      "children": [
+        {
+          "name": "Privacy by Design",
+          "children": [
+            {
+              "name": "Mascaramento no lado do cliente"
+            },
+            {
+              "name": "Abordagem Whitelist para PII"
+            },
+            {
+              "name": "Certificação ISO/IEC 27701"
+            }
+          ]
+        },
+        {
+          "name": "Mobile App Analytics",
+          "children": [
+            {
+              "name": "Além das taxas de crash"
+            },
+            {
+              "name": "Suporte SwiftUI e Jetpack Compose"
+            },
+            {
+              "name": "Redução do MTTR"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
