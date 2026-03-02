@@ -30,9 +30,10 @@ Toda vez que o usuário pedir para desenvolver o conteúdo de uma **"Nova Funcio
    - **Obrigatório:** Trazer 1 (um) "Caso de Uso de Exemplo" simulando uma dor real e mostrando como a ferramenta salva o fluxo da empresa naquele dia exato. Terminar com CTA forte.
 
 ## 🗂️ Temas Planejados no Backlog (Funcionalidades do Glassbox)
-Comecar pelo pacote CX Essencial
-[x] Interaction Maps
-[x] Page Journey
+[x] O que é o Glassbox e por que ele existe?
+[x] Autocapture (Tagless)
+[x] Struggle Analysis
+[ ] Augmented Journey Map
 [ ] Recorded Sessions
 
 Meshboards
