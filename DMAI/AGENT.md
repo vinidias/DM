@@ -14,8 +14,8 @@ Toda vez que o usuário pedir para desenvolver o conteúdo de uma **"Nova Funcio
 
 1. **Consulta (Inteligência):** Consultar o NotebookLM sobre a funcionalidade específica para extrair dores, casos reais e impactos.
 2. **Artigo Long-Form (LinkedIn Newsletter / Blog):**
-   - **Tamanho OBRIGATÓRIO:** Mínimo absoluto de 1.500 palavras (explore o tema a fundo, não pode ser raso).
-   - Formato literário, analítico e aprofundado, voltado a C-Levels, Gestores de Produto e UX.
+   - **Tamanho OBRIGATÓRIO:** Mínimo absoluto de 1.500 palavras (explore o tema a fundo, com muitos exemplos práticos).
+   - **Tone of Voice:** Profissional, direto, persuasivo e em **Português do Brasil simples e acessível**. Evite palavras rebuscadas, arcaicas ou jargões excessivamente poéticos/complexos. Seja claro como um gestor sênior explicando algo prático para sua equipe.
    - Explorar exaustivamente a *dor financeira*, o *risco institucional* de não usar a funcionalidade visando o ROI, detalhando a mecânica do problema e como a solução funciona tecnicamente na prática.
 3. **Geração de Recursos Visuais (Imagens e Infográficos):**
    - **Gemini (DM Style):** Total de 3 imagens. Uma imagem de topo (Header) ratio wide, conceitual, e duas imagens de corpo ilustrando UI, dashboards ou conceitos das dores. *Sempre usar a imagem de referência `/Users/viniciusdias/Developer/dm/DMAI/DM Style/284836359_516413340140627_8694981189887920755_n.jpg`.*
