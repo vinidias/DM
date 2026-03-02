@@ -14,6 +14,9 @@ Toda vez que o usuário pedir para desenvolver o conteúdo de uma **"Nova Funcio
 
 1. **Consulta (Inteligência):** Consultar o NotebookLM sobre a funcionalidade específica para extrair dores, casos reais e impactos.
 2. **Artigo Long-Form (LinkedIn Newsletter / Blog):**
+   - **Títulos OBRIGATÓRIOS:** Fornecer sempre *dois títulos distintos*. 
+     1) **Título SEO (Blog):** Focado em *Search Engine Optimization*. Use palavras-chave de alta densidade e volume de busca corporativa (ex: UX, CRO, Analytics, Customer Retention, DXI).
+     2) **Título LinkedIn:** Focado em *Copywriting/Conversão*. Alto impacto, persuasivo, provocativo e focado em dores de negócios C-Level.
    - **Tamanho OBRIGATÓRIO:** Mínimo absoluto de 1.500 palavras (explore o tema a fundo, com muitos exemplos práticos).
    - **Tone of Voice:** Profissional, direto, persuasivo e em **Português do Brasil simples e acessível**. Evite palavras rebuscadas, arcaicas ou jargões excessivamente poéticos/complexos. Seja claro como um gestor sênior explicando algo prático para sua equipe.
    - Explorar exaustivamente a *dor financeira*, o *risco institucional* de não usar a funcionalidade visando o ROI, detalhando a mecânica do problema e como a solução funciona tecnicamente na prática.
